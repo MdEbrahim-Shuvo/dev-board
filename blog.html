@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!--! === TailWindCSS link === -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!--! === Font-icon link === -->
+    <script src="https://kit.fontawesome.com/84a173ef2c.js" crossorigin="anonymous"></script>
+    <!--! === Components link === -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!--! === style file link === -->
+    <link rel="stylesheet" href="style.css">
+    <style type="text/tailwindcss">
+        @theme {
+        --font-poppins-new: "Poppins", sans-serif;
+        --color-logo-gray: #00303C;
+        --color-sky-body: rgba(244, 247, 255, 1);
+        --color-tAssigned-sky: #F4F7FF;
+        --color-violet1: rgba(55, 82, 253, 1);
+        --color-violet1-light: rgba(55, 82, 253, 0.20);
+        --color-violet2: rgba(108, 127, 250, 1);
+        --color-violet3: rgba(155, 168, 248, 0.50);
+        --shadow-d-1: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+          
+        }
+      </style>
+</head>
+<body class="bg-gray-100 text-gray-800 ">
+    <header class=" container mx-auto px-4 py-8">
+        <nav class=" flex items-center justify-between p-5 px-6 bg-white shadow-d-1 rounded-2xl">
+            <div class="nav-left cursor-pointer logo flex items-center gap-3">
+                <div class="logo-img">
+                    <img src="assets/logo.png" alt="logo">
+                </div>
+                <div class="logo-text">
+                    <p><span class="text-logo-gray font-poppins-new font-light tracking-wide text-4xl">Dev</span><span class="text-logo-gray font-poppins-new font-bold text-4xl">Board</span></p>
+                </div>
+            </div>
+            <div class="text-center">
+                <button id="backButton" class="font-poppins-new font-medium bg-violet1 text-white px-6 py-4 cursor-pointer rounded-lg hover:bg-blue-600 transition duration-300">Back to Desk</button>
+            </div>
+        </nav>
+    </header>
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8 font-poppins-new">Blogs</h1>
+
+        <!-- Question-1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <div class="border-b-2 border-gray-200 border-dashed">
+                <h2 class="text-2xl font-semibold mb-4 font-poppins-new">Question-1: What are the different ways to select an element in the DOM?</h2>
+            </div>
+            <p class="text-gray-700 py-5 font-poppins-new">In JavaScript, there are several ways to select an element in the DOM. The most common method is document.getElementById("id"), which selects an element based on its unique ID. Another approach is document.getElementsByClassName("class"), which returns a collection of elements that share the same class name. Similarly, document.getElementsByTagName("tag") retrieves all elements with a specific tag name. A more flexible and modern way is using document.querySelector("selector"), which selects the first matching element based on a CSS selector.</p>
+        </div>
+
+        <!-- Question-2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <div class="border-b-2 border-gray-200 border-dashed">
+                <h2 class="text-2xl font-semibold mb-4 font-poppins-new">Question-2: What is the difference between innerHTML, InnerText, and textContent?</h2>
+            </div>
+            <p class="text-gray-700 py-5 font-poppins-new">innerHTML: Retrieves or sets HTML content, including tags and child elements. It processes HTML, making it useful for rendering dynamic content but risky for security if handling user input.
+                innerText: Gets or sets only visible text, ignoring hidden elements and extra spaces. It reflects the rendered text as seen by the user.
+                textContent: Retrieves or sets all text, including hidden elements, without formatting or processing HTML, making it safer for raw text handling.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <div class="border-b-2 border-gray-200 border-dashed">
+                <h2 class="text-2xl font-semibold mb-4 font-poppins-new">Question-2: What is event delegation in the DOM?</h2>
+            </div>
+            <p class="text-gray-700 py-5 font-poppins-new">Event delegation is a technique in the DOM where a parent element listens for events on its child elements using event bubbling. Instead of attaching event listeners to multiple child elements, a single event listener is added to their common parent. When an event occurs on a child, it bubbles up to the parent, which then handles it.</p>
+        </div>
+
+        <!-- Question-3 -->
+
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <div class="border-b-2 border-gray-200 border-dashed">
+                <h2 class="text-2xl font-semibold mb-4 font-poppins-new">Question-4: What is event bubbling in the DOM?</h2>
+            </div>
+            <p class="text-gray-700 py-5 font-poppins-new">Event delegation is a technique in the DOM where a parent element listens for events on its child elements using event bubbling. Instead of attaching event listeners to multiple child elements, a single event listener is added to their common parent. When an event occurs on a child, it bubbles up to the parent, which then handles it.</p>
+        </div>
+
+        <!-- Question-4 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <div class="border-b-2 border-gray-200 border-dashed">
+                <h2 class="text-2xl font-semibold mb-4 font-poppins-new">Question-4: How do you create, add, and remove elements using JavaScript?</h2>
+            </div>
+            <p class="text-gray-700 py-5 font-poppins-new">In JavaScript, you can create, add, and remove elements dynamically in the DOM. To create an element, use document.createElement("tag"), then set its content or attributes. Adding the element can be done using appendChild() or append() to place it inside a parent, or insertBefore() to position it before another element. To remove an element, use element.remove() or parent.removeChild(element). These methods allow efficient DOM manipulation for dynamic web content.</p>
+        </div>
+        
+    </div>
+
+    <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

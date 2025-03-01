@@ -28,12 +28,14 @@ document.getElementById('clear-history').addEventListener('click', function(){
     document.getElementById('activity-log').innerHTML = '';
 })
 
+
 let sixCount = 6;
 let twentyThree = 23;
 const frees = document.getElementsByClassName('complete');
 
 for (const free of frees) {
     free.addEventListener('click', function (event) {
+        alert('Board Updated Succesfully.')
         if (sixCount > 0) {
             sixCount--;
             twentyThree++;
@@ -53,9 +55,13 @@ for (const free of frees) {
             this.style.backgroundColor = "#6c7ffa87";
             this.style.cursor = "not-allowed";
             
+            
         }
     });
 }
+document.getElementById('finish').addEventListener('click', function(){
+    alert('Congrates!!! You have completed all the current task.')
+})
 
 document.getElementById('go').addEventListener('click', function() {
     window.location.href = 'blog.html';
